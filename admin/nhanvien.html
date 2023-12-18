@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pageloaisp.css">
+    <link rel="stylesheet" href="/css/pageTQ.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.1-web/css/all.min.css">
+    <title>Quản lý cửa hàng</title>
+</head>
+<body>
+    <div class="APP">
+        <div class="headerTQ">
+            <img src="/img/food.png" alt="">
+            <div class="headerTQ_hello">
+                <span>Xin chào <i class="fa-solid fa-caret-down"></i>
+                    <div class="headerTQ_submenu">
+                        <a href="/html/food.html" class="dangnhap" style="text-align:left ;"><i class="fa-solid fa-house" style="padding-right: 5px;"></i>Trang chủ</a>
+                        <a href="/admin/login.html" class="dangnhap"><i class="fa-solid fa-arrow-right-to-bracket" style="padding-right:5px;"></i>Đăng xuất</a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="containerTQ">
+            <div class="categoryTQ">
+                <ul>
+                    <li> <a href="../admin/pageTQ.html"><i class="categoryTQ_icon fas fa-tachometer-alt"></i> Tổng quan</a></li>
+                    <li><a href="../admin/pageloaisp.html"><i class="categoryTQ_icon fas fa-boxes"></i>Loại đồ ăn</a></li>
+                    <li> <a href="../admin/pagesanpham.html"><i class="categoryTQ_icon fas fa-barcode"></i>Đồ ăn</a> </li>
+                    <li> <a href="../admin/nhacungcap.html"><i class="categoryTQ_icon fas fa-truck"></i>Nhà cung cấp</a></li>
+                    <li> <a href="../admin/khachhang.html"><i class="categoryTQ_icon fas fa-users"></i>Khách hàng</a></li>
+                    <li> <a href="../admin/nhanvien.html"><i class="categoryTQ_icon fas fa-user"></i>Nhân viên</a></li>
+                    <li> <a href="../admin/hoadonnhap.html"><i class="categoryTQ_icon fas fa-file-import"></i>Hóa đơn nhập</a></li>
+                    <li> <a href="../admin/hoadonban.html"> <i class="categoryTQ_icon fas fa-shopping-cart"></i>Hóa đơn bán</a></li>
+                </ul>
+            </div>
+            <div class="inputloaisp">
+                <div class="title">
+                    Nhập thông tin nhân viên
+                    <hr>
+                </div>
+                <div class="inputloaisp_sp">
+                    <form>
+                        <div class="padding-box">
+                            <label for="txtright">Mã nhân viên:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="manv"
+                                placeholder="">
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Tên nhân viên:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="tennv" placeholder="Nhập tên nhân viên...">
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Số điện thoại:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="sdt" placeholder="Nhập số điện thoại nhân viên...">
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Email:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="email" placeholder="Nhập email nhân viên...">
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Quyền:</label>
+                        </div>
+                        <div class="padding-box">
+                            <select name="nhanvien" id="quyen">
+                                <option value="choose">--Chọn quyền--</option>
+                                <option value="Quản lý">Quản lý</option>
+                                <option value="Nhân viên">Nhân viên</option>
+                            </select>
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Trạng thái:</label>
+                        </div>
+                        <div class="padding-box">
+                            <select name="nhanvien" id="trangthai">
+                                <option value="choose">--Chọn trạng thái--</option>
+                                <option value="Hoạt động">Hoạt động</option>
+                                <option value="Khóa">Khóa</option>
+                            </select>
+                        </div>
+                        <!-- <div class="padding-box">
+                            <label for="txtright">Mật khẩu:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="tenloai" placeholder="Nhập mật khẩu nhân viên...">
+                        </div> -->
+                    </form>
+                    <div class="btn_loaisp" style="margin-bottom: 30px;">
+                        <button class="btn-form" onclick="Themnv()" style="background-color:#F77604; border: 1px solid #F77604 ;"
+                            ><i class="btn_icon fa-solid fa-circle-plus"></i>Thêm nhân viên</button>
+                        <button class="btn-form" onclick="Nhapmoi()" style="background-color: #B8D20B;border: 1px solid #B8D20B ;margin-left: 10px;"
+                            ><i class="btn_icon fa-solid fa-screwdriver-wrench"></i>Nhập mới</button>
+                        <button class="btn-form" onclick="Capnhap()" style="background-color:#F56C57 ;border: 1px solid #F56C57 ; margin-left: 10px;"
+                            ><i class="btn_icon fa-solid fa-up-right-from-square"></i>Cập nhật thông tin</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dsloaisp">
+                <div class="title">
+                    Danh sách thông tin nhân viên
+                    <hr>
+                </div>
+                <div>
+                <div class="dsloaisp_padding-box">
+                    <table>
+                        <thead>
+                             <tr>
+                                <th style="text-align:center;padding:5px;"><input type="checkbox"></th>
+                                <th>Mã nhân viên</th>
+                                <th>Tên nhân viên</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Quyền</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                        </thead>
+                        <tbody id="listTypeProduct">
+                            <!-- <tr>
+                                <td style="text-align:center;padding:5px;"><input type="checkbox"></td>
+                                <td>555551</td>
+                                <td>Đào nhật Việt</td>
+                                <td>0901567443</td>
+                                <td>buithibaoanh09@gmail.com</td>
+                                <td>admin</td>
+                                <td>Hoạt động</td>
+                                <td style="text-align: center; cursor: pointer;">
+                                    <i class="fas fa-edit" title="Sửa"></i>
+                                    <i class="fas fa-trash-alt" title="Xóa"></i>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="dsloaisp_padding-box">
+                    <div class="box-sum">
+                        <div class="box-left">
+                            Số lượng nhân viên: <span id="soluong"></span>
+                        </div>
+                        <div class="box-right">
+                            <button><i class="fas fa-angle-left"></i></button>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button><i class="fas fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var list = JSON.parse(localStorage.getItem('nhanvien')) || [];
+
+        function Themnv(){
+            var manv = document.getElementById('manv').value;
+            var tennv = document.getElementById('tennv').value;
+            var sdt = document.getElementById('sdt').value;
+            var email = document.getElementById('email').value;
+            var quyen = document.getElementById('quyen').value;
+            var trangthai = document.getElementById('trangthai').value;
+            var a = email.indexOf('@');
+            var dot = email.lastIndexOf('.');
+
+            if(manv == null || manv == ""){
+                alert("Vui lòng nhập mã nhân viên");
+                return false;
+            }
+            else if(tennv == null || tennv == ""){
+                alert("Vui lòng nhập tên nhân viên");
+                return false;
+            }
+            else if(email == null || email == ""){
+                alert("Vui lòn nhập email của bạn")
+                return false;
+            }
+            else if(a < 0 || dot < 0 ){
+                alert("Vui lòng nhập đúng email");
+                return false;
+            }
+            else if(quyen == 'choose'){
+                alert("Vui lòng chọn quyền ")
+                return false;
+            }
+            else if(trangthai == 'choose'){
+                alert("Vui lòng chọn trạng thái")
+                return false;
+            }
+
+            for(x of list){
+                if(x.manv == manv){
+                    alert("Mã nhân viên không được trùng")
+                    return false;
+                }
+            }
+            
+            if(list == null) list = [];
+            var nv = {
+                'manv':manv,
+                'tennv':tennv,
+                'sdt':sdt,
+                'email':email,
+                'quyen':quyen,
+                'trangthai':trangthai,
+            }
+            list.push(nv);
+            localStorage.setItem('nhanvien',JSON.stringify(list));
+            alert("Thêm thành công")
+            location.reload();
+        }
+
+        function loadnv(){
+            var nv = "";
+            var sl = 0;
+            for(x of list){
+                sl++
+                nv += `<tr>
+                            <td style="text-align:center;padding:5px;"><input type="checkbox"></td>
+                            <td>${x.manv}</td>
+                            <td>${x.tennv}</td>
+                            <td>${x.sdt}</td>
+                            <td>${x.email}</td>
+                            <td>${x.quyen}</td>
+                            <td>${x.trangthai}</td>
+                            <td style="text-align: center; cursor: pointer;">
+                                <i class="fas fa-edit" title="Sửa" onclick="Suanv('${x.manv}')"></i>
+                                <i class="fas fa-trash-alt" title="Xóa" onclick="Xoanv('${x.manv}')"></i>
+                            </td>
+                        </tr>`;
+            }
+            document.getElementById('listTypeProduct').innerHTML = nv;
+            document.getElementById('soluong').innerHTML = sl;
+        }
+        loadnv();
+
+        function Suanv(manv){
+            for(x of list){
+                var manv = document.getElementById('manv').value = x.manv
+                var tennv = document.getElementById('tennv').value = x.tennv
+                var sdt = document.getElementById('sdt').value = x.sdt
+                var email = document.getElementById('email').value = x.email
+                var quyen = document.getElementById('quyen').value = x.quyen
+                var trangthai = document.getElementById('trangthai').value = x.trangthai
+            }
+        }
+
+        function Xoanv(manv) {
+            if(confirm("Bạn có muốn xóa không!")){
+                var index = list.findIndex(function(x){
+                    return x.manv == manv
+                })
+                if(index >=0 ){
+                    list.splice(index, 1)
+                }
+                localStorage.setItem('nhanvien', JSON.stringify(list));
+                location.reload();
+            }
+        }
+
+        function Nhapmoi() {
+            var manv = document.getElementById('manv').value = ""
+            var tennv = document.getElementById('tennv').value = ""
+            var sdt = document.getElementById('sdt').value = ""
+            var email = document.getElementById('email').value = ""
+            var quyen = document.getElementById('quyen').value = 'choose'
+            var trangthai = document.getElementById('trangthai').value = 'choose'
+        }
+        
+        function Capnhap() {
+            var manv = document.getElementById('manv').value;
+            var tennv = document.getElementById('tennv').value;
+            var sdt = document.getElementById('sdt').value;
+            var email = document.getElementById('email').value;
+            var quyen = document.getElementById('quyen').value;
+            var trangthai = document.getElementById('trangthai').value;
+            var a = email.indexOf('@');
+            var dot = email.lastIndexOf('.');
+            var ok = true;
+
+            if(manv == null || manv == ""){
+                alert("Vui lòng nhập mã nhân viên");
+                return false;
+            }
+            else if(tennv == null || tennv == ""){
+                alert("Vui lòng nhập tên nhân viên");
+                return false;
+            }
+            else if(email == null || email == ""){
+                alert("Vui lòn nhập email của bạn")
+                return false;
+            }
+            else if(a < 0 || dot < 0 ){
+                alert("Vui lòng nhập đúng email");
+                return false;
+            }
+            else if(quyen == 'choose'){
+                alert("Vui lòng chọn quyền ")
+                return false;
+            }
+            else if(trangthai == 'choose'){
+                alert("Vui lòng chọn trạng thái")
+                return false;
+            }
+
+            for(x of list){
+                if(x.manv == manv){
+                    x.tennv = tennv;
+                    x.email = email;
+                    x.quyen = quyen; 
+                    x.trangthai = trangthai;
+                    ok = false;
+                    break;
+                }
+            }
+            if(ok == false){
+                alert("Cập nhập thành công")
+                localStorage.setItem("nhanvien", JSON.stringify(list));
+                location.reload();
+            }
+            else{
+                alert("Cập nhập thất bại")
+            }
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pageloaisp.css">
+    <link rel="stylesheet" href="/css/pageTQ.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.1-web/css/all.min.css">
+    <title>Quản lý cửa hàng</title>
+</head>
+<body>
+    <div class="APP">
+        <div class="headerTQ">
+            <img src="/img/food.png" alt="">
+            <div class="headerTQ_hello">
+                <span>Xin chào <i class="fa-solid fa-caret-down"></i>
+                    <div class="headerTQ_submenu">
+                        <a href="/html/food.html" class="dangnhap" style="text-align:left ;"><i class="fa-solid fa-house" style="padding-right: 5px;"></i>Trang chủ</a>
+                        <a href="/admin/login.html" class="dangnhap"><i class="fa-solid fa-arrow-right-to-bracket" style="padding-right:5px;"></i>Đăng xuất</a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="containerTQ">
+            <div class="categoryTQ">
+                <ul>
+                    <li> <a href="../admin/pageTQ.html"><i class="categoryTQ_icon fas fa-tachometer-alt"></i> Tổng quan</a></li>
+                    <li><a href="../admin/pageloaisp.html"><i class="categoryTQ_icon fas fa-boxes"></i>Loại đồ ăn</a></li>
+                    <li> <a href="../admin/pagesanpham.html"><i class="categoryTQ_icon fas fa-barcode"></i>Đồ ăn</a> </li>
+                    <li> <a href="../admin/nhacungcap.html"><i class="categoryTQ_icon fas fa-truck"></i>Nhà cung cấp</a></li>
+                    <li> <a href="../admin/khachhang.html"><i class="categoryTQ_icon fas fa-users"></i>Khách hàng</a></li>
+                    <li> <a href="../admin/nhanvien.html"><i class="categoryTQ_icon fas fa-user"></i>Nhân viên</a></li>
+                    <li> <a href="../admin/hoadonnhap.html"><i class="categoryTQ_icon fas fa-file-import"></i>Hóa đơn nhập</a></li>
+                    <li> <a href="../admin/hoadonban.html"> <i class="categoryTQ_icon fas fa-shopping-cart"></i>Hóa đơn bán</a></li>
+                </ul>
+            </div>
+            <div class="inputloaisp">
+                <div class="title">
+                    Nhập thông tin hóa đơn nhập
+                    <hr>
+                </div>
+                <div class="inputloaisp_sp">
+                    <form>
+                        <div class="padding-box">
+                            <label for="txtright">Mã mã hóa đơn:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="mahd"
+                                placeholder="">
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Nhân Viên:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="tennv" placeholder="Nhập tên nhân viên...">
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Nhà cung cấp:</label>
+                        </div>
+                        <div class="padding-box">
+                            <select name="nhacungcap" id="nhacungcap">
+                                <option value="choose">--Chọn nhà cung cấp--</option>
+                                <option value="Mix FOOD">Mixi FOOD</option>
+                                <option value="FOOD">FOOD</option>
+                                <option value="Starbucks">Starbucks</option>
+                            </select>
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Mã đồ ăn:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="masp" placeholder="Nhập mã đồ ăn...">
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Số Lượng:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="sl" placeholder="Nhập số lượng...">
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Đơn giá:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="dongia" placeholder="Nhập giá đồ ăn...">
+                        </div>
+                    </form>
+                    <div class="btn_loaisp">
+                        <button class="btn-form" onclick="Them()" style="background-color:#F77604; border: 1px solid #F77604 ;"
+                            ><i class="btn_icon fa-solid fa-circle-plus"></i>Thêm hóa đơn</button>
+                        <button class="btn-form" onclick="Nhapmoi()" style="background-color: #B8D20B;border: 1px solid #B8D20B ;margin-left: 10px;"
+                            ><i class="btn_icon fa-solid fa-screwdriver-wrench"></i>Nhập mới</button>
+                        <button class="btn-form" onclick="CapNhap()" style="background-color:#F56C57 ;border: 1px solid #F56C57 ; margin-left: 10px;"
+                            ><i class="btn_icon fa-solid fa-up-right-from-square"></i>Cập nhật thông tin</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dsloaisp">
+                <div class="title">
+                    Danh sách thông tin hóa đơn nhập
+                    <hr>
+                </div>
+                <div>
+                <div class="dsloaisp_padding-box">
+                    <table>
+                        <thead>
+                             <tr>
+                                <th style="text-align:center;padding:5px;"><input type="checkbox"></th>
+                                <th>Mã hóa đơn nhập</th>
+                                <th>Nhân viên</th>
+                                <th>Nhà cung cấp</th>
+                                <th>Mã đồ ăn</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Thao tác</th>
+                        </thead>
+                        <tbody id="listTypeProduct">
+                            <!-- <tr>
+                                <td style="text-align:center;padding:5px;"><input type="checkbox"></td>
+                                <td>555551</td>
+                                <td>Đào nhật Việt</td>
+                                <td>0901567443</td>
+                                <td>buithibaoanh09@gmail.com</td>
+                                <td>Kim động</td>
+                                <td style="text-align: center; cursor: pointer;">
+                                    <i class="fas fa-edit" title="Sửa"></i>
+                                    <i class="fas fa-trash-alt" title="Xóa"></i>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="dsloaisp_padding-box">
+                    <div class="box-sum">
+                        <div class="box-left">
+                            Số lượng hóa đơn: <span id="soluong"></span>
+                        </div>
+                        <div class="box-right">
+                            <button><i class="fas fa-angle-left"></i></button>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button><i class="fas fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var list = JSON.parse(localStorage.getItem('hoadonnhap')) || [];
+        // var sanpham = JSON.parse(localStorage.getItem('sanpham')) || [];
+
+        function Them(){
+            var mahd = document.getElementById('mahd').value;
+            var nv = document.getElementById('tennv').value;
+            var ncc = document.getElementById('nhacungcap').value;
+            var masp = document.getElementById('masp').value;
+            var sl = document.getElementById('sl').value;
+            var dongia = document.getElementById('dongia').value;
+
+            if(mahd == null || mahd == ""){
+                alert("Mã hóa đơn không được để trống")
+                return false;
+            }
+            else if(nv == null || nv == ""){
+                alert("Tên nhân viên không được để trống")
+                return false;
+            }
+            
+            else if(ncc == "choose"){
+                alert("Nhà cung cấp không được để trống")
+                return false;
+            }
+            else if(masp == null || masp == ""){
+                alert("Mã đồ ăn không được để trống")
+                return false;
+            }
+            else if(sl < 0 || nv == ""){
+                alert("Số lượng không được để trống và phải lớn hơn 0")
+                return false;
+            }
+            else if( dongia < 0  || dongia == ""){
+                alert("Đon giá không được để trống và phải lớn hơn 0")
+                return false;
+            }
+
+            for(x of list){
+                if(x.mahd == mahd){
+                    alert("Mã đã tồn tại vui lòng nhập lại")
+                    return false;
+                }
+            }
+            
+
+            if(list == null) list = [];
+            var hdn = {
+                'mahd': mahd,
+                'nv':nv,
+                'ncc':ncc,
+                'masp':masp,
+                'sl': sl,
+                'dongia': dongia,
+            }
+            list.push(hdn)
+            localStorage.setItem('hoadonnhap', JSON.stringify(list));
+            alert("Thêm thành công");
+            location.reload();
+        }
+
+        function loadhd(){
+            var hd = "";
+            var sl = 0
+            var tien = 0;
+            for (x of list) {
+                // tien += x.sl * x.dongia;
+                sl++;
+                hd += `<tr>
+                            <td style="text-align:center;padding:5px;"><input type="checkbox"></td>
+                            <td>${x.mahd}</td>
+                            <td>${x.nv}</td>
+                            <td>${x.ncc}</td>
+                            <td>${x.masp}</td>
+                            <td>${x.sl}</td>
+                            <td>${x.dongia}</td>
+                            <td style="text-align: center; cursor: pointer;">
+                                <i class="fas fa-edit" title="Sửa" onclick = "Sua('${x.mahd}')"></i>
+                                <i class="fas fa-trash-alt" title="Xóa" onclick = "Xoa('${x.mahd}') "></i>
+                            </td>
+                        </tr>`;
+            }
+            document.getElementById('listTypeProduct').innerHTML = hd;
+            document.getElementById('soluong').innerHTML = sl;
+        }
+        loadhd();
+
+        function Sua(mahd){
+            for(x of list){
+                var mahd = document.getElementById('mahd').value = x.mahd
+                var nv = document.getElementById('tennv').value = x.nv
+                var ncc = document.getElementById('nhacungcap').value = x.ncc
+                var masp = document.getElementById('masp').value = x.masp
+                var sl = document.getElementById('sl').value = x.sl
+                var dongia = document.getElementById('dongia').value = x.dongia
+            }
+        }
+
+        function Xoa(mahd){
+            if(confirm("Bạn có muốn xóa không")){
+                var index = list.findIndex(function(x){
+                    return x.mahd == mahd
+                })
+                if(index >=0 ){
+                    list.splice(index, 1)
+                }
+                localStorage.setItem('hoadonnhap', JSON.stringify(list));
+                location.reload()
+            }
+        }
+
+        function Nhapmoi(){
+            var mahd = document.getElementById('mahd').value = ""
+            var nv = document.getElementById('tennv').value = ""
+            var ncc = document.getElementById('nhacungcap').value = "choose";
+            var masp = document.getElementById('masp').value = ""
+            var sl = document.getElementById('sl').value = ""
+            var dongia = document.getElementById('dongia').value = ""
+        }
+
+        function CapNhap(){
+            var mahd = document.getElementById('mahd').value;
+            var nv = document.getElementById('tennv').value;
+            var ncc = document.getElementById('nhacungcap').value;
+            var masp = document.getElementById('masp').value;
+            var sl = document.getElementById('sl').value;
+            var dongia = document.getElementById('dongia').value;
+            var ok = true;
+
+            if(mahd == null || mahd == ""){
+                alert("Mã hóa đơn không được để trống")
+                return false;
+            }
+            else if(nv == null || nv == ""){
+                alert("Tên nhân viên không được để trống")
+                return false;
+            }
+            else if(ncc == null || ncc == ""){
+                alert("Nhà cung cấp không được để trống")
+                return false;
+            }
+            else if(masp == null || masp == ""){
+                alert("Mã đồ ăn không được để trống")
+                return false;
+            }
+            else if(sl < 0 || nv == ""){
+                alert("Số lượng không được để trống và phải lớn hơn 0")
+                return false;
+            }
+            else if(dongia < 0  || dongia == ""){
+                alert("Tên nhân viên không được để trống và phải lớn hơn 0")
+                return false;
+            }
+
+            for(x of list){
+                if(x.mahd == mahd){
+                    x.nv = nv;
+                    x.ncc = ncc;
+                    x.masp = masp;
+                    x.sl = sl;
+                    x.dongia = dongia;
+                    ok = false;
+                    break;
+                }
+            }
+            if(ok == false){
+                alert("Sửa thành công")
+                localStorage.setItem('hoadonnhap', JSON.stringify(list))
+                location.reload();
+            }
+            else{
+                alert("Sửa không thành công")
+            }
+        }
+    </script>
+</body>
+</html>

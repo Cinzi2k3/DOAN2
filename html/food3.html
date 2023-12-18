@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form đăng nhập</title>
+        <link rel="stylesheet" href="/css/food3.css">
+    </head>
+    <body>
+        <div>
+            <img src="/img/anvat.jpg" width="100%" height="100%" alt="">
+            <div class="chu">
+                <div class="hinhanh"><img src="/img/cửa.png" alt="" height="250px" width="200px"></div>
+                <div class="formdn">
+                    <from class="form">
+                        <h1 class="heading">Form đăng nhập</h1>
+                        <h2>Tên Đăng Nhập</h2>
+                        <div class="finput">
+                            <input type="text" id="tendn" > 
+                        </div>
+                        <h3>Mật Khẩu</h3>
+                        <div class="finput">
+                            <input type="password" id="matkhau" >
+                            <div class="ey">
+                                <button onclick="eye()" id="eye">show</button>
+                            </div>
+                        </div>
+                        <input type="submit" class="submit" onclick="check()" value="Đăng nhập">
+                    </from>
+                </div>
+            </div>
+        </div>
+        
+        <Script>
+            function check(){
+                var tk = document.getElementById("tendn").value;
+                var mk = document.getElementById("matkhau").value;
+                if (tk == ""){
+                    alert("điền tài khoản của bạn");
+                    return false;
+                }
+                if(mk == ""){
+                    alert("điền mật khẩu của bạn");
+                    return false;
+                }
+                if(tk == "cinzi" && mk == "cinzi"){
+                    window.location.href = "food.html";
+
+                }
+                else{
+                    alert("sai tk hoặc mk");
+                    return false;
+                }
+
+            }
+        function eye(){
+            var mk = document.getElementById("matkhau");
+            mk.type = (mk.type === "password")? "text":"password"; 
+        }
+        </Script>
+
+    </body>
+</html>

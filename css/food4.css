@@ -1,0 +1,465 @@
+.wap{
+    width:100%;
+    height:50px;
+}
+.wap img{
+    object-fit: cover;
+}
+nav{
+    background-color:black;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:10px;
+}
+li{
+    list-style: none;
+    margin:auto;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav ul li:nth-child(2) a{
+   color: yellow;
+}
+nav ul li:nth-child(2) i{
+    margin-left: 5px;
+    color:yellow;
+}
+nav ul li:nth-child(3) i{
+    position: absolute;
+    left:550px;
+    line-height:32px;
+}
+nav ul li:nth-child(3) input{
+    padding-left: 8px;
+    outline-offset: none;
+    height: 30px;
+}
+nav ul li:nth-child(4){
+    background: white;
+}
+
+nav ul li:nth-child(4) button{
+    background-color:black;
+    color:white;
+    border:1px solid white;
+    padding: 8px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+nav ul li:nth-child(4) i{
+    margin-right:5px;
+}
+nav ul li:nth-child(4) button:hover{
+    background:gray;
+}
+nav ul li:nth-child(5) a{
+    color:rgb(255, 255, 0);
+}
+.content{
+    background: yellow;
+    width:10px;
+    height:10px;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top:96px;
+    right:650px;
+}
+.top{
+    position: absolute;
+    width:100%;
+    height:100%;
+    border-radius: 100%;
+    background-color: rgb(189, 160, 27);
+    display: block;
+    pointer-events: none;
+    animation: hieu 2s linear infinite;
+}
+@keyframes hieu{
+    from{
+        opacity: 0.4;
+    }
+    to{
+        transform: scale(7);
+        opacity: 0;
+    }
+}
+nav ul li:nth-child(6) a:hover{
+    color:yellow;
+}
+nav ul li:nth-child(7) a:hover{
+    color:yellow;
+}
+nav ul li:nth-child(8) a:hover{
+    color:yellow;
+}
+.muc{
+    background-color:yellow;
+    margin-top:-15px;
+}
+
+.muc >ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.muc >ul> li{
+    margin:auto;
+    padding:15px;
+}
+.muc >ul> li:nth-child(2) i{
+    margin-right:5px;
+}
+.muc>ul>li:nth-child(5) i{
+    margin-right:7px;
+}
+.muc>ul>li:hover{
+    background:white;
+}
+.muc >ul >li a{
+    color :black;
+}
+.muc >ul >li:nth-child(4){
+    position: relative;
+}
+.muc >ul >li:nth-child(4)::before{
+    position: absolute;
+    background-color: red;
+    content: "giảm 5%";
+    height:15px;
+    width:50%;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    color:white;
+    top:0;
+    right:0;
+}
+.muc >ul >li:nth-child(4)::after{
+    position: absolute;
+    background-color: red;
+    content:"";
+    height:5px;
+    width:5px;
+    top:13px;
+    right:40px;
+    transform: rotate(45deg);
+}
+.from-adress{
+    position: fixed;
+    width: 100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,0.8);
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display:none;
+    z-index: 999;
+}
+.adress{
+    width:400px;
+    height:500px;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 30px;
+    padding: 30px;
+}
+.adress h2{
+    font-size: 25px;
+    position: relative;
+}
+.adress h2 span{
+    position: absolute;
+    display:block;
+    border:1px solid black ;
+    cursor: pointer;
+    right:12px;
+    padding: 0px 10px 0px 10px;
+    top:0;
+    line-height: 30px;
+    border-radius:10px ;
+    line-height: 30px;
+}
+.adress form{
+    padding-top: 10px;
+}
+.adress form input,select{
+   height: 40px;
+   display:block;
+   width:100%;
+   margin-top:20px;
+   font-size: 20px;
+   border-radius: 10px;
+}
+.adress form button{
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(241, 162, 16);
+    color:white;
+    border:1px solid black;
+    width:50%;
+    padding: 10px;
+    margin-top: 50px;
+}
+.muc ul li{
+    position: relative;
+}
+.submenu {
+    position: absolute;
+    width:200px;
+    height:auto;
+    left: 0;
+    top: 100%;
+    padding: 10px;
+    background-color: aqua;
+    display:none;
+    z-index: 999;
+}
+.submenu ul li{
+    padding: 8px 0;
+}
+.submenu ul li a:hover{
+    color:hotpink;
+}
+.muc ul li:hover .submenu{
+    display:block;
+}
+.menu{
+    background: aquamarine;
+    z-index: 99;
+    width:150px;
+    display:none;
+}
+.submenu ul li:hover .menu{
+    display:block;
+}
+.container{
+    padding:0px 18px;
+    height:350px;
+}
+.slider-content{
+    display:flex;
+    justify-content: space-between;
+}
+.slider-left{
+    width:65%;
+}
+
+.slider-top{
+    width:100%;
+    height:500px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.slider-top img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.slider-right{
+    width:640px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+.slider-right img{
+    width:220px;
+    height: 220px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.slider-right img{
+    transition: all 0.3s ease;
+}
+.slider-right img:hover{
+    transform: translateY(-10px);
+}
+.click{
+    position: absolute;
+    top:50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.click i{
+    font-size: 30px;
+}
+.click i:hover{
+    background-color: gray;
+}
+.slider-top img{
+    position: absolute;
+}
+.slider-top a:nth-child(2) img{
+    transform: translateX(100%);
+}
+.slider-top a:nth-child(3) img{
+    transform: translateX(200%);
+}
+.slider-top a:nth-child(4) img{
+    transform: translateX(300%);
+}
+.slider-top a:nth-child(5) img{
+    transform: translateX(400%);
+}
+.slider{
+    position: relative;
+    overflow: hidden;
+}
+.story{
+    top:500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sp{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:70%;
+}
+.thongtin{
+    padding-left: 20px;
+    font-size: 23px;
+    width:40%;
+}
+.cart{
+    width:50%;
+    padding-top: 30px;
+    margin: auto;
+    text-align: center;
+}
+.cart h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.cart table{
+    width:100%;
+}
+.cart table thead tr th{
+    text-align: left;
+}
+.cart table tr td{
+    border-bottom: 1px solid rgb(95, 88, 88);
+}
+.sum p{
+    text-align: right;
+}
+.cart{
+    position: fixed;
+    height:100vh;
+    width:500px;
+    right: 0;
+    top: 0;
+    background-color:burlywood;
+    padding:12px;
+    overflow-y: scroll;
+    right:-100%;
+    border-radius: 15px;
+    z-index: 1;
+}
+.product-items2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item22 h1 span{
+    padding-left: 15px;
+}
+.item22 h{
+    padding-left: 15px;
+}
+.item button{
+    margin-top: 20px;
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.item button:hover{
+    background: red;
+    transition: all 0.3 ease;
+}
+.chotdon{
+    background-color: red;
+    color:white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.mogiohang{
+    cursor: pointer;
+}
+.cart i{
+    cursor: pointer;
+}
+.chotdon:hover{
+    background-color: white;
+    color:black;
+}
+.sp1{
+    width:30%;
+}
+.chitiet{
+    width: 100%;
+    
+}
+.chitiet h2{
+    text-align: center;
+    font-size: 35px;
+}
+.chitiet p{
+    margin-left:40px;
+    font-size: 20px;
+}
+.h1{
+    margin-left: 10px;
+}
+
+.ket1{
+    background-color: rgb(139, 226, 117);
+    width:100%;
+    height:50px;
+    padding:10px;
+    margin-top:50px;
+}
+.ket1 >ul {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.ket .ket1 ul li:nth-child(1) i{
+
+    margin-bottom:10px;
+}
+
+.ket2{
+    width:100%;
+    height:100px;
+}
+.ket1 > ul >li >a{
+    color:black;
+    padding-bottom: 10px;
+}
+.ket1 > ul >li{
+    display: flex;
+    padding:0px 10px 0px 10px;
+}
+.ket2 >ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ket2 >ul>li> p{
+    font-size: 20px;
+}

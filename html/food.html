@@ -1,0 +1,624 @@
+<html>
+    <head>
+        <title>Food</title>
+        <link rel="stylesheet" href="/css/food.css">
+        <link rel="stylesheet" href="/fontawesome-free-6.2.1-web/css/all.min.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="angular.min.js"></script>
+        <script src="sanpham.js"></script>
+    </head>
+    <body ng-app="AppBanHang" ng-controller="SanPhamCtrl">
+        <div class="wap">
+            <img src="/img/bang-ron-khai-truong-dep.jpeg" height="60px" width="100%" alt="">
+        </div>
+        <div class="contener">
+            <nav>
+                <ul>
+                    <li>
+                        <a href=""><img src="/img/food.png" alt="" height="50px" width="150%"></a>
+                    </li>
+                    <li id="adress-open">
+                        <a href="#">Miền Bắc<i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <li id="timkiem"><input type="text" placeholder="Tìm kiếm" id="kw" style="border-radius:50px;margin-left: 25px;;"><span class="btntimkiem"><i class="fa-solid fa-magnifying-glass"></i></li></span>
+                    <li>
+                        <a href="#"><button class="mogiohang"><i class="fa-solid fa-cart-shopping"></i>Giỏ Hàng</a></button>
+                    </li>
+                    <li>
+                        <a href=""><span class="content"><span class="top"></span></span>Thử thách nóng !!!</a>
+                    </li>
+                    <li>
+                        <a href="">24h food</a>
+                    </li>
+                    <li>
+                        <a href="/html/food2.html">Tin tức</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-phone"></i>Liên hệ</a> 
+                    </li>
+                   
+                    <div class="from-adress">
+                        <div class="adress">
+                            <h2>Chọn địa chỉ nhận hàng <span id="close">x</span></h2>
+                            <form action="">
+                                <input type="text" value="" placeholder="Nhập họ tên">
+                                <select name="" id="tinh">
+                                    <option value="#">Chọn địa điểm</option>
+                                    <option value="">Hưng Yên</option>
+                                </select>
+                                <select name="" id="huyen">
+                                    <option value="#">Huyện</option>
+                                    <option value="">Kim Động</option>
+                                </select>
+                                <select name="" id="xa">
+                                    <option value="#">Xã</option>
+                                    <option value="">Toàn Thắng</option>
+                                </select>
+                                <input type="text" placeholder="Số nhà,tên đường">
+                                <button id="xacnhan">Xác Nhận</button>
+                            </form>
+                        </div>
+                    </div>    
+                </ul>
+            </nav>
+        </div>
+        <div class="muc">
+            <ul>
+                <li><a href="">Danh mục sản phẩm  <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="">Trà sữa</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="">Trà sữa đào</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Trà sữa matcha</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Trà sữa socola</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Trà sữa lúa mạch</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Hồng trà sữa</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="">Đồ ăn vặt</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="">Khô gà lá chanh</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Khô bò lá chanh</a>
+                                    </li>
+                                    <li><a href="">Mì cay</a></li>
+                                    <li>
+                                        <a href="">Khoai lang kén</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Xúc xích</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="">Kem</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="">Kem ốc quế</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Kem dâu</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Kem matcha</a
+                                            ></li>
+                                    <li>
+                                        <a href="">Kem socola</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Bánh pudding</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Hướng dương</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa-solid fa-house"></i>Trang chủ</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="/html/food2.html ">Tin tức</a></li>
+                            <li><a href="">Dịch vụ</a></li>
+                            <li><a href="">Chăm sóc khách hàng</a></li>
+                            <li><a href="">Shipper</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                            <li><a href="">Tư vấn</a></li>
+                        </ul>
+                </li>
+                <li><a href="">Wed đăng kí</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="">food.vn</a></li>
+                            <li><a href="">anvat.pn</a></li>
+                            <li><a href="">suadau.vnj</a></li>
+                            <li><a href="">banh.opp</a></li>
+                            <li><a href="">milk.tt</a></li>
+                            <li><a href="">anngon.com</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">Khuyến mãi </a>
+                    <div class="submenu">
+                        <ul>
+                            <li>
+                                <a href="">Ăn siêu khủng nhận tiền thưởng</a>
+                            </li>
+                            <li>
+                                <a href="">Mừng lễ noel giảm 20%</a>
+                            </li>
+                            <li>
+                                <a href="">5 người sớm nhất nhận vocher free 3 day</a>
+                            </li>
+                            <li>
+                                <a href="">Trò chơi vui vẻ</a>
+                            </li>
+                            <li>
+                                <a href="">Thoả sức cùng food.vn</a>
+                            
+                            </li>
+                            <li>
+                                <a href="">Giảm 5% khi đăng kí ngay app</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+               
+                <li><a href="">Tài khoản</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="/admin/login.html">Admin</a></li>
+                            <li><a href="/html/food3.html">User</a></li>
+                          
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <section class="container">
+            <div class="slider-content">
+                <div class="slider-left">
+                    <div class="slider">
+                        <div class="slider-top">
+                            <a href=""><img  src="/img/micay.jpg" alt=""></a>
+                            <a href=""><img  src="/img/uong4.jpg" alt=""></a>
+                            <a href=""><img  src="/img/tra.jpg" alt=""></a>
+                            <a href=""><img  src="/img/miutea.jpg" alt=""></a>
+                            <a href=""><img  src="/img/kho.jpg" alt=""></a>
+                        </div>
+                        <div class="click">
+                            <i class="fa-solid fa-angle-left"></i>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="slider-right">
+                    <img src="/img/uong.jpg" alt="">
+                    <img src="/img/uong2.jpg" alt=""> 
+                    <img src="/img/uong3.jpg" alt="">
+                    <img src="/img/piiz.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="banner">
+            <div class="tenn">
+                <h1>
+                    ĐỒ ĂN NỔI BẬT
+                </h1>
+                <hr>
+            </div>
+            <div class="anvatnhu">
+                <img src="/img/in-bang-ron-khai-truong-quan-an-14-2.jpg" alt="" height="50px" width="90%">
+            </div>
+
+        </section>
+        <section class="one">
+            <div class="onetainer">
+                <div class="product-items">
+                    <div class="item">
+                        <a href="food4.html"><img src="/img/KEM.jpg" alt="" width="100%"></a>
+                        <div class="item22">
+                            <h1><span class="giatien">122.000</span><sup>đ</sup></h1>
+                            <h>KEM TƯƠI</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/met.jpg" alt=" " width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">100.000</span><sup>đ</sup></h1>
+                            <h>GỎI CUỐN</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/NEM.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">200.000</span><sup>đ</sup></h1>
+                            <h>NEM RÁN NGŨ LOẠI</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/xienban.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">300.000</span><sup>đ</sup></h1>
+                            <h>XIÊN BẨN</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <a href="/html/food4.html"><img src="/img/KEM.jpg" alt="" width="100%"></a>
+                        <div class="item22">
+                            <h1><span class="giatien">122.000</span><sup>đ</sup></h1>
+                            <h class="next">KEM TƯƠI</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <section class="one">
+            <div class="onetainer">
+                <div class="product-items">
+                    <div class="item">
+                        <img src="/img/ga.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">122.000</span><sup>đ</sup></h1>
+                            <h>PATE CỘT ĐÈN</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/kho.jpg" alt=" " width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">100.000</span><sup>đ</sup></h1>
+                            <h>KHÔ GÀ LÁ CHANH</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/miutea.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">200.000</span><sup>đ</sup></h1>
+                            <h>Trà sữa socola</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/micay.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1 class="giatien"><span>300.000</span><sup></sup></h1>
+                            <h>MÌ CAY</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/tra.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">310.000</span></h1>
+                            <h>Trà đào</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    
+                    
+                </div> 
+            </div>
+        </section>
+        <section class="banner1">
+            <div class="tenn1">
+                <h1>ĐỒ ĂN BÁN CHẠY</h1>
+            </div>
+            <hr>
+        </section>
+        <section class="one1">
+            <div class="onetainer1">
+                <div class="product-items1">
+                    <div class="item">
+                        <a href="food4.html"><img src="/img/KEM.jpg" alt="" width="100%"></a>
+                        <div class="item22">
+                            <h1><span class="giatien">122.000</span><sup>đ</sup></h1>
+                            <h class="next">KEM TƯƠI</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/met.jpg" alt=" " width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">100.000</span><sup>đ</sup></h1>
+                            <h>GỎI CUỐN</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/NEM.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">200.000</span><sup>đ</sup></h1>
+                            <h>NEM RÁN NGŨ LOẠI</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/xienban.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">300.000</span><sup>đ</sup></h1>
+                            <h>XIÊN BẨN</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <a href="/html/food4.html"><img src="/img/KEM.jpg" alt="" width="100%"></a>
+                        <div class="item22">
+                            <h1><span class="giatien">122.000</span><sup>đ</sup></h1>
+                            <h class="next">KEM TƯƠI</h>
+                        </div>
+                        <button>thêm vào giỏ hàng</button>
+                    </div>  
+                </div> 
+            </div>
+        </section>
+        <section class="banner2">
+            <div class="tenn2">
+                <h1>
+                    ĐỒ ĂN MỚI VỀ
+                </h1>
+            </div>
+            <hr>
+        </section>
+        <section class="one2">
+            <div class="onetainer2">
+                <div class="product-items2">
+                    <div class="item">
+                        <img src="/img/ga.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">122.000</span><sup>đ</sup></h1>
+                            <h>PATE CỘT ĐÈN</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/kho.jpg" alt=" " width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">100.000</span><sup>đ</sup></h1>
+                            <h>KHÔ GÀ LÁ CHANH</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/miutea.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">200.000</span><sup>đ</sup></h1>
+                            <h>Trà sữa socola</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/micay.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1 class="giatien"><span>300.000</span><sup></sup></h1>
+                            <h>MÌ CAY</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <img src="/img/tra.jpg" alt="" width="100%">
+                        <div class="item22">
+                            <h1><span class="giatien">310.000</span></h1>
+                            <h>Trà đào</h>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    
+                    
+                </div> 
+            </div>
+        </section>
+        <section class="cart">
+            <span class="dong"><i class="fa-sharp fa-solid fa-right-from-bracket"></i></span>
+            <h2>Cart</h2>
+            <form action="">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Giá thành</th>
+                            <th>Số lượng</th>
+                            <th>Chọn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+                <div class="sum">
+                    <p>Tổng Tiền:<span>0<span></p>
+                </div>
+            </form>
+            <button class="chotdon">Xác nhận chốt đơn</button>
+        </section>
+        <Section class="end">
+            <div class="end1">
+                <div class="end2">
+                    <li><a href=""><span style="color:gray;">KHÁM PHÁ</span></a></li>
+                    <hr >
+                    <li><a href="">Ứng dụng mobi</a></li>
+                    <li><a href="">Bảo mật thông tin </a></li>
+                    <li><a href="">Quy định</a></li>
+                </div>
+                <div class="end2" style="margin-top:41px;">
+                    <li><a href=""><span style="color: gray;">CÔNG TY</span></a></li>
+                    <hr>
+                    <li><a href="">Giới thiệu</a></li>
+                    <li><a href="">Việc làm</a></li>
+                    <li><a href="">Thoả thuận </a></li>
+                    <li><a href="">Quy chế</a></li>
+                </div>
+                <div class="end2">
+                    <li><a href=""><span style="color:gray">THAM GIA TRÊN</span></a></li>
+                    <hr>
+                    <li><a href="">Google</a></li>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Telegram</a></li>
+                </div>
+                <div class="end2" style="margin-bottom:45px">
+                    <li><a href=""><span style="color:gray">GIẤY PHÉP</span></a></li>
+                    <hr>
+                    <li><a href=""><i class="fa-solid fa-bowl-food"></i></a></li>
+                    <li><a href="">MXH 363/GP-BTTTT</a></li>
+                    
+                </div>   
+            </div>
+            
+        </Section>
+        
+       
+        <script>
+            //địa chỉ
+            const adopen = document.querySelector('#adress-open');
+            const adclose = document.querySelector('#close');
+            const xacnhan = document.querySelector('#xacnhan');
+        
+            adopen.addEventListener("click",function(){
+                document.querySelector('.from-adress').style.display = "flex"
+            })
+            adclose.addEventListener("click",function(){
+                document.querySelector('.from-adress').style.display = "none"
+            })
+            xacnhan.addEventListener("click",function(){
+                document.querySelector('.from-adress').style.display = "none"
+                alert('đã cập nhật địa chỉ thành công')
+            })
+            //slider-----
+            let index1=0;
+            const leftt  = document.querySelector('.fa-angle-left');
+            const rightt = document.querySelector('.fa-chevron-right');
+            const img = document.querySelector('.slider-top img');
+            rightt.addEventListener("click",function(){
+                index1=index1+1;
+                if(index1>4){
+                    index1=0;
+                }
+                document.querySelector('.slider-top').style.right = index1 *100+"%"
+            })
+            leftt.addEventListener("click",function(){
+                index1=index1-1;
+                if(index1<=0){
+                    index1=0;
+                }
+                document.querySelector('.slider-top').style.right =index1 *100+"%"
+            })
+            function imgauto(){
+                index1 = index1+1;
+                if(index1>4){
+                    index1=0;
+                }
+                document.querySelector('.slider-top').style.right = index1 *100+"%"
+            }
+            setInterval(imgauto,3000);
+            //--cart--//
+            const btn = document.querySelectorAll('.item button');
+            btn.forEach(function(button,index){
+            button.addEventListener("click",function(event){{
+                var btnitem = event.target
+                var produc = btnitem.parentElement
+                var producimg = produc.querySelector("img").src
+                var producten = produc.querySelector(".item h").innerText
+                var producgia = produc.querySelector(".item span").innerText
+                addgio(producimg,producten,producgia)
+            }})
+                
+            })
+            function addgio(producimg,producten,producgia){
+                var addtr = document.createElement("tr")
+                var carttt = document.querySelectorAll("tbody tr")
+                for (var i=0;i<carttt.length;i++){
+                    var productT = document.querySelectorAll(".tite")
+                    if(productT[i].innerHTML == producten){
+                        alert('sản phẩm của bạn đã có trong giỏ hàng')
+                        return
+                    }
+                }
+               
+
+                var trcontent = '<tr><td><img src="'+producimg+'" alt="" width="70px"><span class="tite">'+ producten +'</span></td><td><span class="giatien1">'+ producgia +'</span></td><td><input class="soluongdon" type="number" value="1" min="1" style="width:50px"></td><td><button class="delete">xoá</button></td></tr>'
+                addtr.innerHTML = trcontent
+                var cartable = document.querySelector("tbody")
+                
+                cartable.append(addtr) 
+                carttotal()
+                xoacart()
+            }
+            function carttotal(){
+                var carttt = document.querySelectorAll("tbody tr")
+                var totoC = 0;
+                for (var i=0;i<carttt.length;i++){
+                    var inputt = carttt[i].querySelector(".soluongdon").value
+                    var producgia = carttt[i].querySelector(".giatien1").innerHTML
+                    
+                    totoA = inputt*producgia*1000
+                    totoC = totoC + totoA
+                    totoD = totoC.toLocaleString('de-DE')
+                }
+                var cartotoA = document.querySelector(".sum span")
+                cartotoA.innerHTML = totoD
+                tangsoluong()
+    
+            }
+            ////xoá cart
+            function xoacart(){
+                var carttt = document.querySelectorAll("tbody tr")
+                for (var i=0;i<carttt.length;i++){
+                    var productT = document.querySelectorAll(".delete")
+                    productT[i].addEventListener("click",function(event){
+                        var delecart = event.target
+                        var cartdele = delecart.parentElement.parentElement
+                        cartdele.remove()
+                    })
+                }
+            }
+            function tangsoluong(){
+                carttt = document.querySelectorAll("tbody tr")
+                for (var i = 0; i < carttt.length ; i++){
+                    var inputvalue = document.querySelector(".soluongdon")
+                    inputvalue = document.addEventListener("change",function(){
+                        carttotal()
+                    })
+                }
+            }
+            //đóng giỏ hàng
+            const mogio = document.querySelector(".mogiohang");
+            const donggio = document.querySelector(".dong");
+            mogio.addEventListener("click",function(){
+                document.querySelector(".cart").style.right = "0"
+            })
+            donggio.addEventListener("click",function(){
+                document.querySelector(".cart").style.right = "-100%"
+            })
+            const chotdon2 = document.querySelector(".chotdon");
+            chotdon2.addEventListener("click",function(){   
+                document.querySelector('.from-adress').style.display = "flex"
+                alert('Bạn đã chốt đơn thành công vui lòng nhập thông tin địa chỉ ')
+            })
+            const chuyen  = document.querySelector(".next")
+            chuyen.addEventListener("click",function(){
+                window.location.href ="food2.html"
+            })
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pageloaisp.css">
+    <link rel="stylesheet" href="/css/pageTQ.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.1-web/css/all.min.css">
+    <title>Quản lý cửa hàng</title>
+</head>
+<body>
+    <div class="APP">
+        <div class="headerTQ">
+            <img src="/img/food.png" alt="">
+            <div class="headerTQ_hello">
+                <span>Xin chào <i class="fa-solid fa-caret-down"></i>
+                    <div class="headerTQ_submenu">
+                        <a href="/html/food.html" class="dangnhap" style="text-align:left ;"><i class="fa-solid fa-house" style="padding-right: 5px;"></i>Trang chủ</a>
+                        <a href="/admin/login.html" class="dangnhap"><i class="fa-solid fa-arrow-right-to-bracket" style="padding-right:5px;"></i>Đăng xuất</a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="containerTQ">
+            <div class="categoryTQ">
+                <ul>
+                    <li> <a href="../admin/pageTQ.html"><i class="categoryTQ_icon fas fa-tachometer-alt"></i> Tổng quan</a></li>
+                    <li><a href="../admin/pageloaisp.html"><i class="categoryTQ_icon fas fa-boxes"></i>Loại đồ ăn</a></li>
+                    <li> <a href="../admin/pagesanpham.html"><i class="categoryTQ_icon fas fa-barcode"></i>Đồ ăn</a> </li>
+                    <li> <a href="../admin/nhacungcap.html"><i class="categoryTQ_icon fas fa-truck"></i>Nhà cung cấp</a></li>
+                    <li> <a href="../admin/khachhang.html"><i class="categoryTQ_icon fas fa-users"></i>Khách hàng</a></li>
+                    <li> <a href="../admin/nhanvien.html"><i class="categoryTQ_icon fas fa-user"></i>Nhân viên</a></li>
+                    <li> <a href="../admin/hoadonnhap.html"><i class="categoryTQ_icon fas fa-file-import"></i>Hóa đơn nhập</a></li>
+                    <li> <a href="../admin/hoadonban.html"> <i class="categoryTQ_icon fas fa-shopping-cart"></i>Hóa đơn bán</a></li>
+                </ul>
+            </div>
+            <div class="inputloaisp" style="width: 25%;">
+                <div class="title">
+                    Nhập thông tin đồ ăn
+                    <hr>
+                </div>
+                <div class="inputloaisp_sp">
+                    <form>
+                        <div class="padding-box">
+                            <label for="txtright">Loại đồ ăn:</label>
+                        </div>
+                        <div class="padding-box">
+                            <select name="loaisp" id="loaisp">
+                                <option value="choose">--Chọn loại đồ ăn--</option>
+                                <option value="Đồ ăn ngọt">Đồ ăn ngọt</option>
+                                <option value="Đồ ăn cay">Đồ ăn cay</option>
+                                <option value="Đồ ăn mặn">Đồ ăn mặn</option>
+                                <option value="Hướng dương">Hướng dương</option>
+                                <option value="Trà sữa">Trà sữa</option>
+                                <option value="Humberger">Humberger</option>
+                            </select>
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Nhà cung cấp:</label>
+                        </div>
+                        <div class="padding-box">
+                            <select name="nhacungcap" id="nhacungcap">
+                                <option value="choose">--Chọn nhà cung cấp--</option>
+                                <option value="Mix FOOD">Mixi FOOD</option>
+                                <option value="FOOD">FOOD</option>
+                                <option value="Starbucks">Starbucks</option>
+                            </select>
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Mã đồ ăn:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="masp"
+                                placeholder="" >
+                        </div>
+                        <div class="padding-box">
+                            <label for="txtright">Tên đồ ăn:</label>
+                        </div>
+                        <div class="padding-box">
+                            <input type="text" id="tensp" placeholder="Nhập tên đồ ăn...">
+                        </div>
+                        <div class=" padding-box">
+                            <label for="txtright">Số lượng:</label>
+                        </div>
+                        <div class=" padding-box">
+                            <input type="number" id="slsp" placeholder="Nhập số lượng...">
+                        </div>
+                        <div class=" padding-box">
+                            <label for="txtright">Giá bán:</label>
+                        </div>
+                        <div class=" padding-box">
+                            <input type="number" id="giaban" placeholder="Nhập giá bán...">
+                        </div>
+                    </form>
+                    <div class="btn_loaisp">
+                        <button class="btn-form" onclick="Themsp()" style="background-color:#F77604; border: 1px solid #F77604 ; line-height: 40px;font-size:1.2rem ;"
+                            ><i class="btn_icon fa-solid fa-circle-plus"></i>Thêm đồ ăn
+                        </button>
+                        <button class="btn-form" onclick="Nhapmoi()" style="background-color: #B8D20B;border: 1px solid #B8D20B ;margin-left: 10px;line-height: 40px;font-size:1.2rem ;"
+                            ><i class="btn_icon fa-solid fa-screwdriver-wrench"></i>Nhập mới
+                        </button>
+                        <button class="btn-form" onclick="Capnhap()" style="background-color:#F56C57 ;border: 1px solid #F56C57 ; margin-left: 10px;line-height: 40px;font-size:1.2rem ;"
+                            ><i class="btn_icon fa-solid fa-up-right-from-square"></i>Cập nhật thông tin
+                        </button>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="dsloaisp" style="width: 58.33333%;">
+                <div class="title">
+                    Danh sách thông tin đồ ăn
+                    <hr>
+                </div>
+                <div>
+                <div class="dsloaisp_padding-box">
+                    <table>
+                        <thead>
+                             <tr>
+                                <th><input type="checkbox"></th>
+                                <th>Mã đồ ăn</th>
+                                <th>Tên đồ ăn</th>
+                                <th>Loại đồ ăn</th>
+                                <th>Nhà cung cấp</th>
+                                <th>Số lượng</th>
+                                <th>Giá bán</th>
+                                <th>Thao tác</th>
+                        </thead>
+                        <tbody id="listTypeProduct">
+                            <!-- <tr>
+                                <td style="text-align:center;padding: 5px;"><input type="checkbox"></td>
+                                <td>555551</td>
+                                <td>Tivi Sony 43inch</td>
+                                <td>Loại 1</td>
+                                <td>Bùi Thị Bảo Anh</td>
+                                <td>50</td>
+                                <td>13000000</td>
+                                <td style="text-align: center; cursor: pointer;">
+                                    <i class="fas fa-edit" title="Sửa"></i>
+                                    <i class="fas fa-trash-alt" title="Xóa"></i>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="dsloaisp_padding-box">
+                    <div class="box-sum">
+                        <div class="box-left">
+                            Số lượng đồ ăn: <span id="soluong"></span>
+                        </div>
+                        <div class="box-right">
+                            <button><i class="fas fa-angle-left"></i></button>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button><i class="fas fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var list = JSON.parse(localStorage.getItem('sanpham')) || [];
+
+        function Themsp(){
+            var loaisp = document.getElementById('loaisp').value;
+            var nhacungcap = document.getElementById('nhacungcap').value;
+            var masp = document.getElementById('masp').value;
+            var tensp = document.getElementById('tensp').value;
+            var slsp = document.getElementById('slsp').value;
+            var giaban = document.getElementById('giaban').value;
+
+
+            if(loaisp == 'choose'){
+                alert("Vui lòng chọn loại đồ ăn")
+                return false;
+            }
+            else if(nhacungcap == 'choose'){
+                alert("Vui lòng chọn nhà cung cấp")
+                return false;
+            }
+            else if(masp == "" || masp == null){
+                alert("Mã đồ ăn không được bỏ trống! Vui lòng nhập lại")
+                return false;
+            }
+            else if(tensp == null || tensp == ""){
+                alert("Tên đồ ăn không được bỏ trống! Vui lòng nhập lại")
+                return false;
+            }
+            else if(slsp < 0 || isNaN(slsp)){
+                alert("Số lượng đồ ăn không được nhỏ hơn 0")
+                return false;
+            }
+            else if(giaban < 0 || isNaN(giaban)){
+                alert("Gía bán  không được nhỏ hơn 0")
+                return false;
+            }
+
+            for(x of list){
+                if(x.masp == masp){
+                    alert("Mã đồ ăn đã tồn tại! Vui lòng nhập lại")
+                    return false;
+                }
+            }
+
+            if(list == null) list = [];
+            var sp = {
+                'loaisp': loaisp,
+                'nhacungcap': nhacungcap,
+                'masp': masp,
+                'tensp':tensp,
+                'slsp':slsp,
+                'giaban': giaban,
+            }
+            list.push(sp);
+            localStorage.setItem("sanpham", JSON.stringify(list))
+            alert("Thêm thành công")
+            location.reload();
+
+        }
+
+
+        function loadsp(){
+            var sp = "";
+            var sl = 0;
+            for(x of list){
+                sl++;
+                sp += `<tr>
+                            <td style="text-align:center;padding: 5px;"><input type="checkbox"></td>
+                            <td>${x.masp}</td>
+                            <td>${x.tensp}</td>
+                            <td>${x.loaisp}</td>
+                            <td>${x.nhacungcap}</td>
+                            <td>${x.slsp}</td>
+                            <td>${x.giaban}</td>
+                            <td style="text-align: center; cursor: pointer;">
+                                <i class="fas fa-edit" title="Sửa" onclick="Suasp(${x.masp})"></i>
+                                <i class="fas fa-trash-alt" title="Xóa" onclick="Xoasp(${x.masp})"></i>
+                            </td>
+                        </tr>`;
+            }
+            document.getElementById('listTypeProduct').innerHTML = sp;
+            document.getElementById('soluong').innerHTML = sl;
+        };
+        loadsp();
+
+
+
+        function Suasp(masp) {
+            for(x of list){
+                var loaisp = document.getElementById('loaisp').value = x.loaisp;
+                var nhacungcap = document.getElementById('nhacungcap').value = x.nhacungcap;
+                var masp = document.getElementById('masp').value = x.masp;
+                var tensp = document.getElementById('tensp').value = x.tensp;
+                var slsp = document.getElementById('slsp').value = x.slsp
+                var giaban = document.getElementById('giaban').value = x.giaban;
+            }
+        }
+
+        function Xoasp(masp) {
+            if(confirm("Bạn có muốn xóa không")){
+                var index = list.findIndex(function(x){
+                    return x.masp == masp
+                })
+                if(index >= 0){
+                    list.splice(index, 1)
+                }
+                localStorage.setItem('sanpham', JSON.stringify(list));
+                location.reload();
+            }
+        }
+
+
+        function Nhapmoi(){
+            var loaisp = document.getElementById('loaisp').value = "choose"
+            var nhacungcap = document.getElementById('nhacungcap').value = "choose"
+            var masp = document.getElementById('masp').value = ""
+            var tensp = document.getElementById('tensp').value = ""
+            var slsp = document.getElementById('slsp').value = ""
+            var giaban = document.getElementById('giaban').value = ""
+        }
+
+        function Capnhap(){
+            var loaisp = document.getElementById('loaisp').value;
+            var nhacungcap = document.getElementById('nhacungcap').value;
+            var masp = document.getElementById('masp').value;
+            var tensp = document.getElementById('tensp').value;
+            var slsp = document.getElementById('slsp').value;
+            var giaban = document.getElementById('giaban').value;
+            var ok = true;
+
+
+            if(loaisp == 'choose'){
+                alert("Vui lòng chọn loại đồ ăn")
+                return false;
+            }
+            else if(nhacungcap == 'choose'){
+                alert("Vui lòng chọn nhà cung cấp")
+                return false;
+            }
+            else if(masp == "" || masp == null){
+                alert("Mã đồ ăn không được bỏ trống! Vui lòng nhập lại")
+                return false;
+            }
+            else if(tensp == null || tensp == ""){
+                alert("Tên đồ ăn không được bỏ trống! Vui lòng nhập lại")
+                return false;
+            }
+            else if(slsp < 0 || isNaN(slsp)){
+                alert("Số lượng đồ ăn không được nhỏ hơn 0")
+                return false;
+            }
+            else if(giaban < 0 || isNaN(giaban)){
+                alert("Gía bán  không được nhỏ hơn 0")
+                return false;
+            }
+            for(x of list){
+                if(x.masp == masp){
+                    x.loadsp = loaisp;
+                    x.nhacungcap = nhacungcap;
+                    x.tensp = tensp;
+                    x.slsp = slsp;
+                    x.giaban = giaban;
+                    ok = false;
+                    break;
+                }
+            }
+            if(ok == false){
+                alert("Cập nhập thành công")
+                localStorage.setItem("sanpham", JSON.stringify(list))
+                location.reload();
+            }
+            else{
+                alert("Cập nhập thất bại")
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+body{
+    background-size:cover ;
+    background-position-y:-80px ;
+}
+.chu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    color:white;
+    position: absolute;
+    top:100px;
+    left:400px;
+}
+.hinhanh{
+    float:left;
+    height:300px;
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px 30px 30px;
+    background-color:transparent;
+    border: 2px solid green;
+    border-radius: 5px;
+
+}
+.formdn{
+    background-color:brown;
+    width:300px;
+    height:300px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px 30px 30px;
+    background-color:transparent;
+    border: 2px solid black;
+    color:black;
+    border-radius: 5px;
+}
+.heading{
+    text-align:start;
+    margin-bottom: 45px;
+}
+.finput{
+    margin-top:15px ;
+    margin-bottom: 20px;
+}
+.submit{
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.ey{
+    float:right;
+    margin-right: 80px;
+}
